@@ -1,0 +1,6 @@
+-sequelize:orm
+-sequelize/cli:does our most of the things like setting up db configuration 
+-mysql2: for connecting to the mysql db ,for binding the sequlize orm to the mysql server ,gives the driver to connect to the mysql in our system with the sequelize 
+-1)npx sequelize init creates the required config files ,we dont run inside the src folder but we run inside the root directory only bcoz in src it would rewrite all the services and so on folder we created 
+-If we want to put some dummy data in our db,(used for database seeding. Database seeding is a process in which initial or sample data is inserted into the database to ensure that it contains some predefined records for development, testing, or demonstration purposes. )
+-2)After setting the config in config.json we will run the command  npx sequelize db:create
