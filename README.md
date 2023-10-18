@@ -3,10 +3,10 @@
 
 ## Project Setup:
 
--clone the project on your local
--Execute npm install on the same path as of your root directory of the downloaded project
--Create a .env file in the root directory and add the following enviroment variables -`PORT=3000`
--Inside the src/config create a config.json and add the following json :
+- clone the project on your local
+- Execute npm install on the same path as of your root directory of the downloaded project
+- Create a .env file in the root directory and add the following enviroment variables -`PORT=3000`
+- Inside the src/config create a config.json and add the following json :
 
 ```
 {
@@ -21,4 +21,4 @@
 
 ```
 
--Once you have added the db config as listed above,go to the src and execute 'npx sequelize db:create'
+- Once you have added the db config as listed above,go to the src and execute 'npx sequelize db:create'

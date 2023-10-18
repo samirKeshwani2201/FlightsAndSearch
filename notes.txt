@@ -4,3 +4,9 @@
 -1)npx sequelize init creates the required config files ,we dont run inside the src folder but we run inside the root directory only bcoz in src it would rewrite all the services and so on folder we created 
 -If we want to put some dummy data in our db,(used for database seeding. Database seeding is a process in which initial or sample data is inserted into the database to ensure that it contains some predefined records for development, testing, or demonstration purposes. )
 -2)After setting the config in config.json we will run the command  npx sequelize db:create
+- Model tells how the database table  looks like 
+-Repository tells what functions we are exposing in order to add data to the table remove data from the table and so on 
+-npx sequelize model:generate --name City --attributes name:String generates a model file and migration file  ,prepares the js classes for us and not syncs with  our db,so to reflect in db we should sync it 
+-migration files helps to make incremental changes to the table like and generates a file for every changes
+-npx sequelize db:migrate :which ever new migrations are there which are not applied yet will be applied 
+
