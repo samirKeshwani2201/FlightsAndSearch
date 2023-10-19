@@ -1,4 +1,3 @@
- 
 # Welcome to the Flight Services
 
 ## Project Setup:
@@ -22,3 +21,5 @@
 ```
 
 - Once you have added the db config as listed above,go to the src and execute 'npx sequelize db:create'
+
+`npx sequelize db:migrate`

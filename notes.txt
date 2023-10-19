@@ -9,4 +9,5 @@
 -npx sequelize model:generate --name City --attributes name:String generates a model file and migration file  ,prepares the js classes for us and not syncs with  our db,so to reflect in db we should sync it 
 -migration files helps to make incremental changes to the table like and generates a file for every changes
 -npx sequelize db:migrate :which ever new migrations are there which are not applied yet will be applied 
-
+-In the models say you mention some constains then it wont be reflected in db it just throws error in the js file when you use that models object
+-All the interaction with the model should happen through the repository level
