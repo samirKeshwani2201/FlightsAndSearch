@@ -11,3 +11,4 @@
 -npx sequelize db:migrate :which ever new migrations are there which are not applied yet will be applied 
 -In the models say you mention some constains then it wont be reflected in db it just throws error in the js file when you use that models object
 -All the interaction with the model should happen through the repository level
+-In repository we have index.js so that we can get all the repositories at once and dont have to require one by one
