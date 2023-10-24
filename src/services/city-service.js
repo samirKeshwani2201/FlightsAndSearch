@@ -5,12 +5,22 @@ class CityService {
         this.cityRepository = new CityRepository();
     }
 
-
-
+    
     async createCity(data) {
         try {
             const city = await this.cityRepository.createCity(data);
+            console.log(data);
             return city;
+        } catch (error) {
+            console.log("Something went wrong in service layer");
+            throw { error };
+        }
+    }
+
+    async createMultipleCity(data) {
+        try {
+            const cities = await this.cityRepository.createMultipleCity(data);
+            return cities;
         } catch (error) {
             console.log("Something went wrong in service layer");
             throw { error };

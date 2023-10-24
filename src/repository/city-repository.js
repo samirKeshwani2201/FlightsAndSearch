@@ -6,7 +6,17 @@ class CityRepository {
     async createCity({ name }) {
         try {
             const city = await City.create({ name });
+
             return city;
+        } catch (error) {
+            console.log("Something went wrong in repository layer ");
+            throw { error };
+        }
+    }
+    async createMultipleCity(arr) {
+        try {
+            const cities = await City.bulkCreate(arr);
+            return cities;
         } catch (error) {
             console.log("Something went wrong in repository layer ");
             throw { error };
@@ -38,6 +48,7 @@ class CityRepository {
 
                 }
             );
+            return city;
             // const city = await City.findByPk(cityId);
             // city.name = data.name;
             // await city.save();
