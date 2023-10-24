@@ -23,3 +23,12 @@
 - Once you have added the db config as listed above,go to the src and execute 'npx sequelize db:create'
 
 `npx sequelize db:migrate`
+
+## Tables
+
+### City : id ,name 
+
+### Airport -> id ,name,address,city_id
+    Relationship -> City has many airports & aiport belongs to a city (one to many )
+    When we have one to many then the table having many doesnt store anything about one 
+    But one has to store data of many 
