@@ -26,7 +26,6 @@ const create = async (req, res) => {
 
 const multipleCreate = async (req, res) => {
     try {
-
         const cities = await cityService.createMultipleCity(req.body.arr);
         return res.status(201).json({
             data: cities,
@@ -84,7 +83,7 @@ const get = async (req, res) => {
         });
     }
 };
- 
+
 const update = async (req, res) => {
     try {
         const city = await cityService.updateCity(req.params.id, req.body);
@@ -126,6 +125,20 @@ const getAll = async (req, res) => {
     }
 };
 
+const getAllAirports = async (req, res) => {
+    try {
+        const allAirPorts = await cityService.getAllAirports(req.params.cityId);
+        return res.status(200).json({
+            data: allAirPorts,
+            success: true,
+            message: "Successfully fetched all airports of a city",
+            err: {}
+        });
+    } catch (error) {
+
+    }
+};
+
 module.exports = {
-    create, update, get, destroy, getAll, multipleCreate
+    create, update, get, destroy, getAll, multipleCreate, getAllAirports
 };

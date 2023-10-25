@@ -69,6 +69,19 @@ class CityRepository {
         }
     }
 
+    async getAllAirports(id) {
+        try {
+            const city = await City.findByPk(id);
+            console.log(id);
+            const airports = await city.getAirports();
+
+            return airports;
+        } catch (error) {
+            console.log("Something went wrong in repository layer ");
+            throw { error };
+        }
+    }
+
     async getAllCities(filter) {
         try {
             if (filter.name) {
