@@ -1,6 +1,5 @@
 const { Airport } = require("../models/index");
-
-
+ 
 class AirportRepository {
 
     async createAirport({ name, address, cityId }) {
@@ -12,6 +11,7 @@ class AirportRepository {
             throw { error };
         }
     }
+   
     async deleteAirport(airportId) {
         try {
             await Airport.destroy({
