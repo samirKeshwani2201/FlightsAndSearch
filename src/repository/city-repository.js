@@ -72,8 +72,8 @@ class CityRepository {
     async getAllAirports(id) {
         try {
             const city = await City.findByPk(id);
-            console.log(id);
             const airports = await city.getAirports();
+            console.log(id);
 
             return airports;
         } catch (error) {
