@@ -22,14 +22,14 @@ router.get("/citiy/:cityId/airports", CityController.getAllAirports);
 
 router.post('/flights', FlightMiddlewares.validateCreateFlight, FlightController.create);
 router.get('/flights', FlightController.getAll);
+router.get("/flights/:id", FlightController.get);
+router.patch("/flights/:id", FlightController.update);
 
 
 router.post('/airports', AirportController.create);
 router.delete("/airport/:id", AirportController.destroy);
 router.get("/airport/:id", AirportController.get);
 router.patch("/airport/:id", AirportController.update);
-
-
 
 module.exports = router;
 

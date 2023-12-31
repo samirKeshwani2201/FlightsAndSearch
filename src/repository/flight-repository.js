@@ -19,7 +19,7 @@ class FlightRepository {
             Object.assign(filter, {
                 price: {
                     [Op.lte]: data.maxPrice,
-                    [Op.gte]: data.minPrice 
+                    [Op.gte]: data.minPrice
                 }
             });
         }
@@ -63,6 +63,18 @@ class FlightRepository {
         }
     }
 
-
+    async updatFlight(flightId, data) {
+        try {
+            await Flights.update(data, {
+                where: {
+                    id: flightId
+                }
+            });
+            return true;
+        } catch (error) {
+            console.log("Something went wrong in repository layer ");
+            throw { error };
+        } 
+    }
 }
 module.exports = FlightRepository; 
